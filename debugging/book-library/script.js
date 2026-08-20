@@ -98,9 +98,14 @@ function render() {
     delBut.className = "btn btn-warning";
     delBut.innerHTML = "Delete";
     delBut.addEventListener("click", function () {
-      alert(`You've deleted title: ${myLibrary[i].title}`);
+      const deletedTitle = myLibrary[i].title;
+
       myLibrary.splice(i, 1);
       render();
+
+      setTimeout(function () {
+        alert(`You've deleted title: ${deletedTitle}`);
+      }, 0.5);
     });
   }
 }
