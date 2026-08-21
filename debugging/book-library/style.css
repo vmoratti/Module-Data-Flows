@@ -1,7 +1,5 @@
 .form-group {
   width: 400px;
-  height: 300px;
-  align-self: left;
   padding-left: 20px;
 }
 
@@ -9,11 +7,23 @@
   display: block;
 }
 
-.form-check-label {
+.form-check {
   padding-left: 20px;
-  margin: 5px 0px 5px 0px;
+  margin: 5px 0;
 }
 
 button.btn-info {
   margin: 20px;
+}
+
+.form-group label {
+  margin-top: 10px;
+}
+
+.form-group .btn-primary {
+  margin-top: 15px;
+}
+
+.text-danger {
+  font-weight: bold;
 }
