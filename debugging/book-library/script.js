@@ -7,12 +7,7 @@ window.addEventListener("load", function () {
 
 function populateStorage() {
   if (myLibrary.length === 0) {
-    const book1 = new Book(
-      "Robison Crusoe",
-      "Daniel Defoe",
-      252,
-      true
-    );
+    const book1 = new Book("Robison Crusoe", "Daniel Defoe", 252, true);
 
     const book2 = new Book(
       "The Old Man and the Sea",
@@ -26,14 +21,12 @@ function populateStorage() {
   }
 }
 
-
 // Get the form and its input elements
 const bookForm = document.getElementById("book-form");
 const titleInput = document.getElementById("title");
 const authorInput = document.getElementById("author");
 const pagesInput = document.getElementById("pages");
 const checkInput = document.getElementById("check");
-
 
 // Add a new book when the form is submitted
 bookForm.addEventListener("submit", function (event) {
@@ -61,14 +54,12 @@ bookForm.addEventListener("submit", function (event) {
   bookForm.reset();
 });
 
-
 function Book(title, author, pages, check) {
   this.title = title;
   this.author = author;
   this.pages = pages;
   this.check = check;
 }
-
 
 function render() {
   const tableBody = document.querySelector("#display tbody");
@@ -121,7 +112,7 @@ function render() {
       // Show the message after the book has been removed
       setTimeout(function () {
         alert(`You've deleted title: ${deletedTitle}`);
-      }, 0);
+      }, 3);
     });
   }
 }
